@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSF Project</title>
+  <link rel="stylesheet" href="styles.css">
+  <style type="text/css">
+   @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+   * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #282828;
+   }
+
+   li, a, button {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #FFFFFF;
+    text-decoration: none;
+   }
+
+   header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px 10%;
+   }
+
+   .logo {
+    width: 10%;
+    cursor: pointer;
+    margin-right: auto;
+   }
+
+   .navigation {
+    list-style: none;
+   }
+
+   .navigation li {
+    display: inline-block;
+    padding: 0px 20px;
+   }
+
+   .navigation li a {
+    transition: all 0.3s ease 0s;
+   }
+
+    .navigation li a:hover {
+    color: #3500D3;
+   }
+
+   button {
+    padding: 9px 25px;
+    background-color: rgba(53, 0, 211, 1.0);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    margin-left: 20px;
+   }
+
+   button:hover {
+    background-color: rgba(53, 0, 211, 0.6);
+   }
+
+   .home   {
+      display: flex;
+      justify-content: center;
+      background-image:url(10.png);
+      background-repeat:no-repeat;
+      background-size: cover;
+      background-position: left;
+      padding-top: 200px;
+      padding-bottom: 200px;
+      background-attachment: fixed;
+      background-size: 110%;
+     }
+
+     .ingredients   {
+      display: flex;
+      justify-content: center;
+      background-image:url(2.jpg);
+      background-repeat:no-repeat;
+      background-size: cover;
+      background-position: left;
+      padding-top: 200px;
+      padding-bottom: 200px;
+      background-attachment: fixed;
+      background-size: 110%;
+     }
+
+      .recipe   {
+      display: flex;
+      justify-content: center;
+      background-image:url(12.jpg);
+      background-repeat:no-repeat;
+      background-size: cover;
+      background-position: left;
+      padding-top: 200px;
+      padding-bottom: 200px;
+      background-attachment: fixed;
+      background-size: 110%;
+     }
+
+    h1 {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: arial;
+      position: relative;
+      font-size: 80px;
+      letter-spacing: 15px;
+      color: #0C0032;
+      text-transform: uppercase;
+      width: 100%;
+      text-align: center;
+      outline: none;
+      animation: animate 5s linear infinite;
+      background-color: transparent;
+    }
+
+    @keyframes animate
+    {
+      0%,18%,20%,50.1%,60%,65.1%,80%,90.1%,92%
+      {
+        color: #0C0032;
+        text-shadow: none;
+      }
+      18.1%,20.1%,30%,50%,60.1%,65%,80.1%,90%,92.1%,100%
+      {
+        color: #fff;
+        text-shadow: 0 0 10px #3500D3,
+        0 0 20px #3500D3,
+        0 0 40px #3500D3,
+        0 0 80px #3500D3,
+        0 0 160px #3500D3;
+      }
+    }
+
+    .text {
+      background-color: transparent;
+    }
+
+    .hometext {
+      margin: 0;
+      padding: 0;
+      margin-top: 80px;
+      box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
+      position: relative;
+      font-size: 40px;
+      letter-spacing: 4px;
+      color: #FFFFFF;
+      text-transform: uppercase;
+      width: 100%;
+      text-align: center;
+      outline: none;
+      background-color: transparent;
+    }
+
+      .homesec {
+        display: flex;
+        width: 100%;
+        height: 200px;
+        background-color: #282828;
+      }
+
+     .pictext   {
+      width: 40%;
+     }
+
+     .textpic {
+      margin-left: 3%;
+     }
+
+    .inside   {
+      display: flex;
+      background-attachment: fixed;
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+
+    .textpictitle {
+      font-family: 'Montserrat', sans-serif;
+      color: #D4D4D4;
+      font-size: 28px;
+    }
+
+    .textpicinfo {
+      font-family: 'Roboto', sans-serif;
+      color: #F5F5F5;
+    }
+
+    .grid {
+      margin: 90px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 200px;
+      align-items: center;
+    }
+
+    .grid > article{
+      background-color: #5F5F5F;
+      border: none;
+      box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+      border-radius: 20px;
+      text-align: center;
+      width: 220px;
+      transition: transform .3s;
+    }
+
+    .grid > article:hover{
+      transform: translateY(5px);
+      box-shadow: 2px 2px 26px 0px rgba(0, 0, 0, 0.0);
+    }
+
+    .grid > article img{
+      width: 100%;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+    }
+
+    .gridtext {
+      padding: 0 20px 20px;
+      background-color: #5F5F5F;
+      border-radius: 0px 0px 20px 20px;
+    }
+
+    h3 {
+      text-transform: uppercase;
+      background-color: #5F5F5F;
+      color: #232323;
+    }
+
+     @media (max-width: 768px){
+      .grid{
+        grid-template-columns: repeat(2, 1fr);
+      }
+     }
+
+     @media (max-width:  500px){
+      .grid{
+        grid-template-columns: repeat(1, 1fr);
+      }
+     }
+
+     .grid > article {
+      text-align: center;
+     }
+
+     .gridfont {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #5F5F5F;
+     }
+
+     .steponepic   {
+      width: 20%;
+      border-radius: 10px 0px 0px 10px;
+     }
+
+     .steponetext {
+      margin-left: 3%;
+      background-color: #5F5F5F;
+      border-radius: 10px 10px 10px 10px;
+     }
+
+    .stepone   {
+      display: flex;
+      align-content: center;
+      background-attachment: fixed;
+      margin-left: 12%;
+      margin-right: 12%;
+      background-color: #5F5F5F;
+      border-radius: 10px 10px 10px 10px;
+    }
+
+    .steponetitle {
+      font-family: 'Montserrat', sans-serif;
+      padding-top: 10px;
+      background-color: #5F5F5F;
+      font-size: 150%;
+      border-radius: 10px 10px 10px 10px;
+    }
+
+    .steponebody {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #5F5F5F;
+      font-size: 80%;
+      padding-right: 10px;
+      border-radius: 10px 10px 10px 10px;
+    }
+
+    .steptwopic   {
+      width: 20%;
+      border-radius: 10px 0px 0px 10px;
+     }
+
+     .steptwotext {
+      margin-left: 3%;
+      background-color: #5F5F5F;
+      border-radius: 10px 10px 10px 10px;
+     }
+
+    .steptwo   {
+      display: flex;
+      align-content: center;
+      background-attachment: fixed;
+      margin-left: 12%;
+      margin-right: 12%;
+      background-color: #5F5F5F;
+      border-radius: 10px 10px 10px 10px;
+    }
+
+    .steptwotitle {
+      font-family: 'Montserrat', sans-serif;
+      padding-top: 10px;
+      background-color: #5F5F5F;
+      font-size: 150%;
+      border-radius: 10px 10px 10px 10px;
+    }
+
+    .steptwobody {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #5F5F5F;
+      font-size: 80%;
+      padding-right: 10px;
+      border-radius: 10px 10px 10px 10px;
+    }
+
+    .stepthreepic   {
+      width: 20%;
+      border-radius: 10px 0px 0px 10px;
+     }
+
+     .stepthreetext {
+      margin-left: 3%;
+      background-color: #5F5F5F;
+      border-radius: 10px 10px 10px 10px;
+     }
+
+    .stepthree   {
+      display: flex;
+      align-content: center;
+      background-attachment: fixed;
+      margin-left: 12%;
+      margin-right: 12%;
+      background-color: #5F5F5F;
+      border-radius: 10px 10px 10px 10px;
+    }
+
+    .stepthreetitle {
+      font-family: 'Montserrat', sans-serif;
+      padding-top: 10px;
+      background-color: #5F5F5F;
+      font-size: 150%;
+      border-radius: 10px 10px 10px 10px;
+    }
+
+    .stepthreebody {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #5F5F5F;
+      font-size: 80%;
+      padding-right: 10px;
+      border-radius: 10px 10px 10px 10px;
+    }
+
+    .stepfourpic   {
+      width: 20%;
+      border-radius: 10px 0px 0px 10px;
+     }
+
+     .stepfourtext {
+      margin-left: 3%;
+      background-color: #5F5F5F;
+      border-radius: 10px 10px 10px 10px;
+     }
+
+    .stepfour   {
+      display: flex;
+      align-content: center;
+      background-attachment: fixed;
+      margin-left: 12%;
+      margin-right: 12%;
+      background-color: #5F5F5F;
+      border-radius: 10px 10px 10px 10px;
+    }
+
+    .stepfourtitle {
+      font-family: 'Montserrat', sans-serif;
+      padding-top: 10px;
+      background-color: #5F5F5F;
+      font-size: 150%;
+      border-radius: 10px 10px 10px 10px;
+    }
+
+    .stepfourbody {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #5F5F5F;
+      font-size: 80%;
+      padding-right: 10px;
+      border-radius: 10px 10px 10px 10px;
+    }
+
+    h4 {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #5F5F5F;
+      text-align: center;
+      font-size: 50%;
+    }
+
+    .contactdiv {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #5F5F5F;
+      text-align: center;
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+
+
+
+    
+  </style>
+
+  </head>
+
+
+  <body>
+    <header>
+      <img class="logo" src="pinkie.png" alt="logo">
+      <nav>
+        <ul class="navigation">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#ingredients">Ingredients</a></li>
+          <li><a href="#recipe">Recipe</a></li>
+        </ul>
+      </nav>
+      <a class="contact" href="#contact"><button>Contact</button></a>
+    </header>
+
+    <section id="home" href="#home" class="home">
+     <div class="text">
+       <h1 class="heading" contenteditable="true">Stir Fry Ramen</h1>
+     </div>
+    </section>
+     <section>
+      <div class="homesec">
+        <h2 class="hometext">Food Information</h2>
+      </div>
+    </section>
+    <section class="inside">
+        <img class="pictext" src="2.jpg">
+        <div class="textpic">
+        <h2 class="textpictitle">Why I choose this food.</h2>
+        <br>
+        <p class="textpicinfo">I chose this recipe because it is very easy to make, and it tastes great. Ramen is very easy to get, and the recipe ingredients are very common. This makes creating this tasty dish very easy. I also chose this recipe because I'm addicted to ramen. </p>
+        <br>
+        <br>
+        <h2 class="textpictitle">Allergy Information</h2>
+        <br>
+        <p class="textpicinfo">Sesame seeds were are used in the recipe. Please refrain from eating if you have sesame seed allergies. Noodles are gluten free.</p>
+        </div>
+    </section>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <section id="ingredients" href="#ingredients" class="ingredients">
+     <div class="text">
+       <h1 class="heading" contenteditable="true">Ingredients</h1>
+     </div>
+    </section>
+    <br>
+    <br>
+    <section>
+      <div class="gridingredients">
+        <main class="grid">
+          <article>
+            <img src="veg.png" alt="">
+            <div class="gridtext">
+              <h3 class="gridfont">Vegetables</h3>
+              <p class="gridfont">
+                2 green onions
+                <br>
+                4 garlic cloves
+                <br>
+                1 cup green vegatables 
+              </p>
+            </div>
+          </article>
+
+          <article>
+            <img src="ramen.jpeg" alt="">
+            <div class="gridtext">
+              <h3 class="gridfont">Other</h3>
+              <p class="gridfont">
+                2 packs of ramen noodles
+                <br>
+                2 tbsp sesame seeds
+                <br>
+                1 tbsp vegatable oil
+              </p>
+            </div>
+          </article>
+
+          <article>
+            <img src="sauce.png" alt="">
+            <div class="gridtext">
+              <h3 class="gridfont">Sauce</h3>
+              <p class="gridfont">
+                2 tbsp soy sauce
+                <br>
+                1 tbsp sesame/olive oil
+                <br>
+                3 tbsp sweet chili sauce
+              </p>
+            </div>
+          </article>
+        </main>
+      </div>
+    </section>
+    <br>
+    <br>
+    <section id="recipe" href="#recipe" class="recipe">
+     <div class="text">
+       <h1 class="heading" contenteditable="true">Recipe</h1>
+     </div>
+    </section>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <section class="stepone">
+        <img class="steponepic" src="3.jpg">
+        <div class="steponetext">
+        <h2 class="steponetitle">Step One</h2>
+        <br>
+        <h2 class="steponebody">Heat the vegetable oil in a pot or pan on medium-high heat, then add the green onions, garlic and vegetables. Cook for 3-4 minutes until the vegetables are tender. </h2>
+        </div>
+    </section>
+    <br>
+    <br>
+    <br>
+    <br>
+   <section class="steptwo">
+        <img class="steptwopic" src="1.jpg">
+        <div class="steptwotext">
+        <h2 class="steptwotitle">Step Two</h2>
+        <br>
+        <h2 class="steptwobody">While the vegetables are cooking, mix the sauce ingredients together in a small bowl.  </h2>
+        </div>
+    </section>
+    <br>
+    <br>
+    <br>
+    <br>
+   <section class="stepthree">
+        <img class="stepthreepic" src="5.jpg">
+        <div class="stepthreetext">
+        <h2 class="stepthreetitle">Step Three</h2>
+        <br>
+        <h2 class="stepthreebody">Boil the ramen noodles just until they begin to come apart and are slightly soft, then drain and add the noodles and sauce to the pot, mixing everything together on medium heat for 2-3 minutes.  </h2>
+        </div>
+    </section>
+    <br>
+    <br>
+    <br>
+    <br>
+   <section class="stepfour">
+        <img class="stepfourpic" src="13.png">
+        <div class="stepfourtext">
+        <h2 class="stepfourtitle">Step Four</h2>
+        <br>
+        <h2 class="steponebody">Serve topped with some sesame seeds and sliced green onions. </h2>
+        </div>
+    </section>
+    <br>
+    <br>
+    <br>
+    <br>
+    <section id="contact" href="#contact" class="contact">
+      <div class="contactdiv">
+        <h4>email: anthony.truong613@gmail.com</h4>
+      </div>
+    </section>
+    
+</html>
